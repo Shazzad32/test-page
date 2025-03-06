@@ -20,14 +20,16 @@ export default function CheckoutPage() {
       <div className="h-auto">
         {" "}
         <h2 className="text-2xl font-semibold mb-4">Your Products</h2>
-        <div className="h p-4 rounded-md bg-red-400 flex items-center gap-4 w-full lg:w-1/2">
+        <div className="h p-4 rounded-md shadow-md border flex items-center gap-4 w-full lg:w-1/2">
           <img
-            src="/Desktop/dd.jpg"
+            src="https://images.othoba.com/images/thumbs/0634295_wild-stone-ultra-sensual-long-lasting-perfume-for-men-100ml.webp"
             alt="Product Image"
             className="w-16 h-16 object-cover"
           />
           <div className="flex-grow">
-            <h3 className="text-lg font-semibold">আতার হাদিয়া প্যাকেজ</h3>
+            <h3 className="text-lg font-semibold">
+              আতার হাদিয়া প্যাকেজ x <span>{quantity}</span>
+            </h3>
             <div className="flex items-center gap-2 mt-2">
               <button
                 onClick={decreaseQuantity}
@@ -73,14 +75,16 @@ export default function CheckoutPage() {
                 placeholder="আপনার মোবাইল নাম্বার লিখুন"
               />
             </div>
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium">আপনার ঠিকানা *</label>
-            <textarea
-              required
-              className="w-full p-2 border rounded mt-1"
-              placeholder="বসার নং, রোড নং, থানা, জেলা"
-            ></textarea>
+            <div className="mb-4">
+              <label className="block text-sm font-medium">
+                আপনার ঠিকানা *
+              </label>
+              <textarea
+                required
+                className="w-full p-2 border rounded mt-1"
+                placeholder="বসার নং, রোড নং, থানা, জেলা"
+              ></textarea>
+            </div>
           </div>
         </div>
 
@@ -88,8 +92,19 @@ export default function CheckoutPage() {
           {" "}
           <h2 className="text-2xl font-semibold mt-6">Your order</h2>
           <div className="border p-4 rounded-md bg-white mt-4">
-            <div className="flex justify-between">
+            <div className="flex justify-center items-center gap-12">
+              {" "}
+              <img
+                src="https://images.othoba.com/images/thumbs/0634295_wild-stone-ultra-sensual-long-lasting-perfume-for-men-100ml.webp"
+                alt="Product Image"
+                className="w-16 h-16 object-cover"
+              />
               <span>আতার হাদিয়া প্যাকেজ × {quantity}</span>
+              <span>{totalPrice}৳</span>
+            </div>
+            <hr className="my-2" />
+            <div className="flex justify-between font-semibold ">
+              <span>Sub Total</span>
               <span>{totalPrice}৳</span>
             </div>
             <hr className="my-2" />
@@ -98,7 +113,7 @@ export default function CheckoutPage() {
               <span>{totalPrice}৳</span>
             </div>
           </div>
-          <button className="mt-6 w-full bg-orange-500 text-white py-3 rounded-md font-semibold">
+          <button className="mt-6 w-full bg-orange-500 text-white py-3 rounded-md font-semibold cursor-pointer">
             Place Order {totalPrice}৳
           </button>
         </div>

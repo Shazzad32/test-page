@@ -3,7 +3,7 @@ import { FaHandPointRight } from "react-icons/fa";
 
 const Description = () => {
   return (
-    <div className="h-[400px] w-full bg-white border border-teal-200 text-2xl lg:text-4xl p-4 flex flex-col gap-10 shadow-md items-left justify-center">
+    <div className="h-[400px] w-full bg-white border border-teal-200 text-2xl lg:text-3xl p-4 flex flex-col gap-10 shadow-md items-left justify-center">
       <p className="flex gap-3">
         <FaHandPointRight />
         কাবা শরীফের আদলে অনন্য গিফট বক্স – পবিত্রতা ও আভিজাত্যের এক নিদর্শন।

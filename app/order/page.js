@@ -3,7 +3,7 @@ import OrderForm from "../components/OrderForm";
 
 const OrderPage = () => {
   return (
-    <div className="h-auto w-full bg-gray-200 flex justify-center items-center flex-col gap-5">
+    <div className="h-auto w-full flex justify-center items-center flex-col">
       <OrderForm />
     </div>
   );
